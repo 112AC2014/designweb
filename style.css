@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #fffaf5;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hero 區塊 */
+  .hero {
+    background: linear-gradient(135deg, #FFD972, #F48FB1);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* 頁首導覽列 */
+  header {
+    background: #F48FB1;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  header a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+  }
+  
+  header a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 章節區塊 */
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #F48FB1;
+    margin-bottom: 10px;
+  }
+  
+  /* 卡片 */
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* 插圖 */
+  .chapter-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Footer */
+  footer {
+    background: #ffe8ec;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.9em;
+  }
+  

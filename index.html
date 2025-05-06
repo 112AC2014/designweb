@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>設計心理學教學網站</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #fffaf5;
+      color: #333;
+      scroll-behavior: smooth;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+    header {
+      background: #F48FB1;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    header a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+    header a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .hero {
+      background: linear-gradient(135deg, #FFD972, #F48FB1);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    .hero h1 {
+      font-size: 3.2em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.4em;
+      max-width: 700px;
+      margin: auto;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #F48FB1;
+      margin-bottom: 10px;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-content {
+      display: none;
+    }
+    .card.open .card-content {
+      display: block;
+    }
+    .chapter-image {
+      width: 60%;
+      max-width: 400px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #F48FB1;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5em;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 999;
+    }
+    footer {
+      background: #ffe8ec;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#chapter1">章一</a>
+    <a href="#chapter2">章二</a>
+    <a href="#chapter3">章三</a>
+    <a href="#chapter4">章四</a>
+    <a href="#chapter5">章五</a>
+    <a href="#chapter6">章六</a>
+    <a href="#chapter7">章七</a>
+    <a href="#chapter8">章八</a>
+    <a href="#chapter9">章九</a>
+  </header>
+
+  <div class="hero">
+    <h1>設計心理學學習平台</h1>
+    <p>從心理出發，打造貼近人心的設計體驗，掌握 UX、情緒設計、行為引導與說服策略</p>
+  </div>
+
+  <section id="chapter1">
+    <div class="card">
+      <h2>第一章：設計心理學概述</h2>
+      <div class="card-content">
+        <img src="ch1.png" class="chapter-image" alt="設計心理學圖示">
+        <p>設計心理學是一門結合心理學與設計的跨領域學科，透過理解人類的感知、記憶與行為機制，幫助設計師創造更直覺且高效的設計。應用實例如 Apple 的簡約 UI、Netflix 的推薦演算法，皆體現心理設計原則。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter2">
+    <div class="card">
+      <h2>第二章：感知與注意力</h2>
+      <div class="card-content">
+        <img src="ch2.png" class="chapter-image" alt="感知圖示">
+        <p>設計需考慮人類如何接收視覺、聽覺等感官資訊。應用如 Z 型與 F 型視線設計、動畫吸引注意力、格式塔原則等，能有效提升使用者對介面的理解與聚焦。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter3">
+    <div class="card">
+      <h2>第三章：記憶與認知負荷</h2>
+      <div class="card-content">
+        <img src="ch3.png" class="chapter-image" alt="記憶圖示">
+        <p>人類短期記憶有限，設計應簡化資訊、使用一致性 UI、進度條、回饋與提示。善用分組（Chunking）、預設選項與步驟導引，有助於降低認知負擔。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter4">
+    <div class="card">
+      <h2>第四章：決策心理學與行為影響</h2>
+      <div class="card-content">
+        <img src="ch4.png" class="chapter-image" alt="決策圖示">
+        <p>人類決策常受情境與心理偏誤影響。設計可透過損失規避、預設效應、社會證明與錨定效應來引導行為，例如倒數促銷、免費試用、推薦標籤等。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter5">
+    <div class="card">
+      <h2>第五章：情緒設計與感受</h2>
+      <div class="card-content">
+        <img src="ch5.png" class="chapter-image" alt="情緒圖示">
+        <p>設計不僅要實用，還需觸發情緒反應。透過顏色、形狀、動畫與擬人化設計（如 Duolingo 小貓頭鷹），可強化正面情感與品牌黏著度。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter6">
+    <div class="card">
+      <h2>第六章：使用者體驗與可用性設計</h2>
+      <div class="card-content">
+        <img src="ch6.png" class="chapter-image" alt="UX圖示">
+        <p>UX 涵蓋有用性、可用性、可取性、可信性等要素。設計應基於心理模型與資訊架構，並透過測試持續優化（如 A/B 測試、熱圖分析）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter7">
+    <div class="card">
+      <h2>第七章：習慣養成與行為設計</h2>
+      <div class="card-content">
+        <img src="ch7.png" class="chapter-image" alt="習慣圖示">
+        <p>透過 Fogg 模型與 Hook 模型，設計可建立使用者習慣。降低操作阻力、提供變動性獎勵與行為提醒是常見策略，如 Instagram 的通知設計。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter8">
+    <div class="card">
+      <h2>第八章：說服設計與心理暗示</h2>
+      <div class="card-content">
+        <img src="ch8.png" class="chapter-image" alt="說服圖示">
+        <p>設計透過互惠、社會認同、權威、稀缺性等策略影響決策。應注重設計倫理，避免操控使用者，如誤導性按鈕與黑暗模式（dark pattern）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter9">
+    <div class="card">
+      <h2>第九章：未來的設計心理學趨勢</h2>
+      <div class="card-content">
+        <img src="ch9.png" class="chapter-image" alt="未來圖示">
+        <p>趨勢包括 AI 個人化介面、無界面（Zero UI）、情境感知與情感計算。設計需結合科技與人文，創造智慧且具人性化的使用者體驗。</p>
+      </div>
+    </div>
+  </section>
+
+  <button id="backToTop" title="回到頂部">↑</button>
+
+  <footer>
+    <p>&copy; 2025 設計心理學教學平台｜由你打造未來的智慧設計</p>
+  </footer>
+
+  <script>
+    // 滑入動畫
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // 回到頂部按鈕
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 點章節標題展開/收合內容
+    document.querySelectorAll('.card h2').forEach(title => {
+      title.addEventListener('click', () => {
+        const card = title.parentElement;
+        card.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
